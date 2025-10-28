@@ -13,17 +13,20 @@ body {
 }
 .container-principal {
     display: flex;
-    justify-content: center;
-    flex-wrap: 20px;
-    gap: 20px;
+    flex-wrap: wrap; /* Esta é a propriedade mais importante */
+    gap: 20px; /* Espaço entre os cartões */
+    justify-content: flex-start; /* ou center, space-between, etc */
     padding: 20px;
 }
 .cartao {
-    background-color: white;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    width: 300px;
+   flex: 0 0 calc(33.333% - 20px);
+    min-width: 300px;
+    box-sizing: border-box;
     padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s;
     color: #333;
 }
