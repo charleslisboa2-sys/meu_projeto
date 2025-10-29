@@ -4,11 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Exemplo de Botões e Formulários</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="form-container">
         <h2>Fale Conosco</h2>
+        <div id="mensagem-status"></div>
     <form action="#">
         <div class="form-group">
             <label for="nome">Nome:</label>
@@ -17,8 +18,17 @@
     <div class="form-group">
         <label for="email">Email:</label>
         <input type="email" id="email" name="email" placeholder="seu.email@exemplo.com" required>
+        </div>
+        <div class="form-group">
+            <label for="mensagem">Mensagem:</label>
+            <textarea id="mensagem" name="mensagem" rows="5" placeholder="Escreva sua mensagem aqui..." required></textarea>
+        </div>
+    <div class="button-group">
+        <button type="submit" class="btn-principal">Enviar</button>
+        <button type="reset" class="btn-secundario">Limpar</button>
     </div>
     </form>
     </div>
+    <script src="script.js"></script>
 </body>
 </html>
